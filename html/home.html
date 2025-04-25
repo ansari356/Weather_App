@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="light-theme">
+    <div class="theme-toggle-container">
+        <button id="logout-btn" class="btn-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+        <button id="theme-toggle" class="btn-icon">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Search for places...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button><br>
+                </div>
+                <div id="suggestions"></div>
+                <select id="city-select">
+                    <option value="">Select a city...</option>
+                </select>
+            </div>
+            
+            <div class="weather-main">
+                <div class="weather-icon">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                </div>
+                <div class="temperature">--°C</div>
+                <div class="date-time">--</div>
+                <div class="weather-description">--</div>
+                <div class="rain-chance">Rain --%</div>
+                <div class="location">--, --</div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <h2>Weather Details</h2>
+            <div class="details-grid">
+                <!-- Wind Status Card -->
+                <div class="detail-card wind-card">
+                    <div class="detail-bg-icon"><i class="fas fa-wind"></i></div>
+                    <div class="detail-content">
+                        <h3>Wind Status</h3>
+                        <div class="detail-value">-- km/h</div>
+                        <div class="detail-extra">--</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="additional-info">
+                            <div>Gusts: <span class="gust-value">-- km/h</span></div>
+                            <div>Direction: <span class="wind-direction">--</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Humidity Card -->
+                <div class="detail-card humidity-card">
+                    <div class="detail-bg-icon"><i class="fas fa-tint"></i></div>
+                    <div class="detail-content">
+                        <h3>Humidity</h3>
+                        <div class="detail-value">--%</div>
+                        <div class="detail-extra">--</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="additional-info">
+                            <div>Dew Point: <span class="dew-point">--°C</span></div>
+                            <div>Comfort Level: <span class="comfort-level">--</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sunrise & Sunset Card -->
+                <div class="detail-card">
+                    <div class="detail-bg-icon"><i class="fas fa-sun"></i></div>
+                    <div class="detail-content">
+                        <h3>Daylight</h3>
+                        <div class="sun-times">
+                            <div class="sun-time sunrise">
+                                <i class="fas fa-sunrise"></i>
+                                <div>
+                                    <div>Sunrise</div>
+                                    <div class="sun-time-value">--:-- AM</div>
+                                    <div class="time-diff">--</div>
+                                </div>
+                            </div>
+                            <div class="sun-time sunset">
+                                <i class="fas fa-sunset"></i>
+                                <div>
+                                    <div>Sunset</div>
+                                    <div class="sun-time-value">--:-- PM</div>
+                                    <div class="time-diff">--</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="additional-info">
+                            <div>Day Length: <span class="day-length">--h --m</span></div>
+                            <div>Solar Noon: <span class="solar-noon">--:--</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Air Quality Card -->
+                <div class="detail-card air-quality-card">
+                    <div class="detail-bg-icon"><i class="fas fa-smog"></i></div>
+                    <div class="detail-content">
+                        <h3>Air Quality</h3>
+                        <div class="detail-value">--</div>
+                        <div class="detail-extra">--</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="additional-info">
+                            <div>PM2.5: <span class="pm25">-- μg/m³</span></div>
+                            <div>PM10: <span class="pm10">-- μg/m³</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

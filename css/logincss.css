@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-image: url('../images/pier-lake-hallstatt-austria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/pier-lake-hallstatt-austria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: breath 20s infinite ease-in-out both;
+    z-index: -1;
+}
+
+
+
+
+
+@keyframes breath {
+    0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+    transform: scale(1.05);
+}
+/* input {
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+} */
+
+  .gradientButton{
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+}
+.gradientButton:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
