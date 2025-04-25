@@ -2,8 +2,6 @@
 
 A responsive weather application that provides current weather conditions, forecasts, and detailed weather information for locations worldwide.
 
-![Weather App Screenshot](https://via.placeholder.com/800x500?text=Weather+App+Screenshot)
-
 ## Features ✨
 
 - **Current Weather Conditions**: Temperature, humidity, wind speed, and more
@@ -33,24 +31,6 @@ A responsive weather application that provides current weather conditions, forec
    ```bash
    git clone https://github.com/ansari356/Weather_App.git
    
-
-
-
-File Structure 📂
-weather-app/
-├── css/
-│   ├── home.css          # Main weather app styles
-│   └── logincss.css      # Login/register page styles
-├── html/
-│   ├── home.html         # Main weather app page
-│   ├── login.html        # Login page
-│   └── register.html     # Registration page
-├── js/
-│   ├── auth.js           # Authentication logic
-│   ├── register.js       # Registration logic
-│   └── script.js         # Main weather app logic
-└── images/               # Weather background images
-
 
 
 Usage Guide 📖
