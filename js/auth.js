@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let userFound = false;
     
     if (localStorage.getItem("isLoggedIn") === "true") {
-        window.location.href = "../index.html";
+        window.location.href = "../html/home.html";
     }
 
     loginForm.addEventListener("submit", (e) => {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         }));
                     }
                     
-                    window.location.href = "../index.html";
+                    window.location.href = "../html/home.html";
                 } else {
                     passwordInput.classList.add("input-error");
                     errorMessage.textContent = "Wrong password. Please try again.";
@@ -60,6 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     createUser.addEventListener("click", () => {
-        window.location.href = "../html/register.html";
+        window.location.href = "../index.html";
     });
 });
